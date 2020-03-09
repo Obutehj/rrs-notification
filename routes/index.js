@@ -22,14 +22,23 @@ router.post('/send-notification', async (req, res) => {
       .json({ status: 'error', error: error.message })
       .end();
   }
-  try {
-    await sendNotify(message, numbers);
-    console.log('message sent');
-    res
-      .status(400)
-      .json({ status: 'success', data: 'message sent' })
-      .end();
-  } catch (err) {
+  if (numbers instanceof Array)
+    try {
+      await sendNotify(message, numbers);
+      console.log('message sent');
+      res
+        .status(400)
+        .json({ status: 'success', data: 'message sent' })
+        .end();
+    } catch (err) {
+      console.log(err);
+      res
+        .status(400)
+        .json({ status: 'error', error: err.message })
+        .end();
+    }
+  else {
+    const err = new Error('numbers must be of type array');
     console.log(err);
     res
       .status(400)

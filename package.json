@@ -5,6 +5,9 @@
   "repository": "https://github.com/neymarjimoh/rrs-notification.git",
   "author": "Akinlua Bolamigbe Jomiloju <bolamigbeakinlua@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "dotenv": "^8.2.0",
     "express": "^4.17.1",

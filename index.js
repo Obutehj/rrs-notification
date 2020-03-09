@@ -13,6 +13,7 @@ const apiRoot = process.env.API_ROOT;
 app.use(`${apiRoot}/v1/notify`, router);
 
 // server setup
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log('server started');
+  console.log('server started............');
 });
