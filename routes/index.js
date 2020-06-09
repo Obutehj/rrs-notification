@@ -22,12 +22,14 @@ router.post('/send-notification', async (req, res) => {
       .json({ status: 'error', error: error.message })
       .end();
   }
+  // note your numbers in the body of the post request should be an array of regiistered numbers
+  // ["+2349070822819", "+2348052949159", "+2348139259326", "+2347082080230"] these are verified numbers
   if (numbers instanceof Array)
     try {
       await sendNotify(message, numbers);
       console.log('message sent');
       res
-        .status(400)
+        .status(201)
         .json({ status: 'success', data: 'message sent' })
         .end();
     } catch (err) {
