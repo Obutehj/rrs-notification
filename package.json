@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/neymarjimoh/rrs-notification.git",
-  "author": "Akinlua Bolamigbe Jomiloju <bolamigbeakinlua@gmail.com>",
+  "author": "Akinlua Bolamigbe Jomiloju <bolamigbeakinlua@gmail.com>, Jimoh Rildwan Adekunle <jemohkunle2007@gmail.com>",
   "license": "MIT",
   "scripts": {
     "start": "node index.js"
